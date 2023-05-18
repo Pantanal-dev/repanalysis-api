@@ -1,0 +1,11 @@
+{
+    "PRE_TRAINED_MODEL_NAME" : "neuralmind/bert-base-portuguese-cased",
+    "TRAINED_MODEL" : "tweet_sentiment_analysis.model",
+    "CLASSES" : [
+        "Negativo",
+        "Neutro",
+        "Positivo"
+    ],
+    "INPUT_LENGTH" : 100,
+    "DROPOUT_RATE" : 0.3
+}
