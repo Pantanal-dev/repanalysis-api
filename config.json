@@ -1,6 +1,6 @@
 {
     "PRE_TRAINED_MODEL_NAME" : "neuralmind/bert-base-portuguese-cased",
-    "TRAINED_MODEL" : "tweet_sentiment_analysis.model",
+    "TRAINED_MODEL" : "assets/tweet_sentiment_analysis.model",
     "CLASSES" : [
         "Negativo",
         "Neutro",
