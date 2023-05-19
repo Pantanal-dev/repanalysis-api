@@ -11,7 +11,7 @@ class TweetClassifier(nn.Module):
     super(TweetClassifier, self).__init__()
     self.bert = BertModel.from_pretrained(config['PRE_TRAINED_MODEL_NAME'])
     self.drop = nn.Dropout(p = config['DROPOUT_RATE'])
-    self.linear = nn.Linear(self.bert.config.hidden_size, len(config['CLASSES']))
+    self.out = nn.Linear(self.bert.config.hidden_size, len(config['CLASSES']))
     
 
   def forward(self, input_ids, attention_mask):
@@ -22,4 +22,4 @@ class TweetClassifier(nn.Module):
     output = self.drop(output)
 
     # Retorna a saída da camada Linear usando a saída da Dropout como entrada
-    return self.linear(output)
+    return self.out(output)
